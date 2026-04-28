@@ -1,0 +1,57 @@
+# Baseline mínimo para a Etapa 1 (refinar com /speckit.specify)
+
+id: task-manager-api
+version: "0.1"
+status: draft
+
+title: Task Manager API
+description: API simples para criar, listar, atualizar status e remover tarefas.
+
+author: "@seu-usuario"
+created_at: 2026-04-17
+updated_at: 2026-04-17
+
+context:
+  problem: Organizar tarefas de forma simples para uso individual ou de pequenos times.
+  target_users:
+    - Desenvolvedores individuais
+    - Times pequenos
+  out_of_scope:
+    - Autenticação
+    - Banco de dados
+
+features:
+  - id: F01
+    name: Health Check
+    priority: must-have
+    status: planned
+  - id: F02
+    name: Criar tarefa
+    priority: must-have
+    status: planned
+  - id: F03
+    name: Listar tarefas
+    priority: must-have
+    status: planned
+  - id: F04
+    name: Atualizar status
+    priority: should-have
+    status: planned
+  - id: F05
+    name: Remover tarefa
+    priority: could-have
+    status: planned
+
+stack:
+  language: Python 3.11
+  framework: FastAPI
+  persistence: in-memory
+  environment: GitHub Codespaces
+
+constraints:
+  - Código simples e didático
+  - Features implementadas em passos curtos
+
+references:
+  - name: Spec Kit Quickstart
+    url: https://github.github.com/spec-kit/quickstart.html

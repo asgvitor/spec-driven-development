@@ -1,0 +1,14 @@
+{
+  "name": "Spec Kit Workshop",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "features": {},
+  "postCreateCommand": "pip install uv && uv tool install specify-cli --from git+https://github.com/github/spec-kit.git && pip install -r requirements.txt",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "GitHub.copilot",
+        "GitHub.copilot-chat"
+      ]
+    }
+  }
+}
