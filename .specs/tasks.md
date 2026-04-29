@@ -19,9 +19,9 @@ Estruturar projeto FastAPI com estrutura base pronta para features.
 
 **Critério de Pronto:** Projeto inicializado, dependências instaladas, servidor executa sem erro.
 
-- [ ] T001 Criar estrutura de diretórios: app/, .specs/, com __init__.py em app/
-- [ ] T002 Criar app/main.py com FastAPI app instance
-- [ ] T003 [P] Instalar dependências: FastAPI, Uvicorn, Pydantic
+- [x] T001 Criar estrutura de diretórios: app/, .specs/, com __init__.py em app/
+- [x] T002 Criar app/main.py com FastAPI app instance
+- [x] T003 [P] Instalar dependências: FastAPI, Uvicorn, Pydantic
 
 ---
 
@@ -32,9 +32,9 @@ Estruturas e componentes compartilhados por todas as features.
 
 **Critério de Pronto:** Modelos e storage disponíveis para todos os endpoints.
 
-- [ ] T004 [P] Criar app/models.py com Pydantic: TaskCreate, TaskUpdate, Task
-- [ ] T005 [P] Criar app/storage.py com storage em memória (tasks_db list)
-- [ ] T006 Implementar ValidationError handler centralizando {"error": "msg", "code": "CODE"} em app/main.py
+- [x] T004 [P] Criar app/models.py com Pydantic: TaskCreate, TaskUpdate, Task
+- [x] T005 [P] Criar app/storage.py com storage em memória (tasks_db list)
+- [x] T006 Implementar ValidationError handler centralizando {"error": "msg", "code": "CODE"} em app/main.py
 
 ---
 
@@ -45,7 +45,7 @@ Como usuário, posso validar saúde da API com GET / → HTTP 200, {"status": "o
 
 **Critério de Pronto:** Endpoint GET / responde conforme spec. Testável isoladamente.
 
-- [ ] T007 [US-F01] Implementar GET / em app/main.py retornando {"status": "ok"}, HTTP 200
+- [x] T007 [US-F01] Implementar GET / em app/main.py retornando {"status": "ok"}, HTTP 200
 
 ---
 
@@ -56,10 +56,10 @@ Como usuário, posso criar tarefa via POST /tasks com title obrigatório (não v
 
 **Critério de Pronto:** POST cria com UUID, title validado, status=pending, created_at. Trata 400 em validações.
 
-- [ ] T008 [US-F02] Implementar POST /tasks com validação: title required, non-empty → 400
-- [ ] T009 [P] [US-F02] Validar description opcional (null permitido)
-- [ ] T010 [US-F02] Gerar UUID para cada tarefa criada em app/storage.py
-- [ ] T011 [US-F02] Retornar Task completo (id, title, description, status=pending, created_at) em POST /tasks
+- [x] T008 [US-F02] Implementar POST /tasks com validação: title required, non-empty → 400
+- [x] T009 [P] [US-F02] Validar description opcional (null permitido)
+- [x] T010 [US-F02] Gerar UUID para cada tarefa criada em app/storage.py
+- [x] T011 [US-F02] Retornar Task completo (id, title, description, status=pending, created_at) em POST /tasks
 
 ---
 
@@ -70,7 +70,7 @@ Como usuário, posso listar todas as tarefas com GET /tasks → retorna array, H
 
 **Critério de Pronto:** GET /tasks retorna [] (vazio) ou [Task, ...]. Testável com storage vazio e com dados.
 
-- [ ] T012 [US-F03] Implementar GET /tasks retornando array Tasks (vazio se nenhuma)
+- [x] T012 [US-F03] Implementar GET /tasks retornando array Tasks (vazio se nenhuma)
 
 ---
 
@@ -81,9 +81,9 @@ Como usuário, posso atualizar status (pending→in_progress→done) via PATCH /
 
 **Critério de Pronto:** PATCH valida status enum, retorna 200 ou 404. Status imutável em POST.
 
-- [ ] T013 [US-F04] Implementar PATCH /tasks/{id} com validação: status ∈ {pending, in_progress, done}
-- [ ] T014 [P] [US-F04] Retornar 404 se ID não encontrado
-- [ ] T015 [US-F04] Validar que POST não permite override de status (sempre pending)
+- [x] T013 [US-F04] Implementar PATCH /tasks/{id} com validação: status ∈ {pending, in_progress, done}
+- [x] T014 [P] [US-F04] Retornar 404 se ID não encontrado
+- [x] T015 [US-F04] Validar que POST não permite override de status (sempre pending)
 
 ---
 
